@@ -1,0 +1,46 @@
+.footer {
+  height: $footer-height;
+  background-color: $primary-bg;
+  color: $text-color;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 $m-size;
+  div:nth-child(2) {
+    justify-self: center;
+    align-self: center;
+    p {
+      margin: 0;
+    }
+  }
+}
+.footer__social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: $m-size;
+  svg {
+    width: $l-size;
+    height: $l-size;
+    fill: $text-color;
+    transition: $pop-in-transition;
+    &:hover {
+      transform: scale(1.2);
+      fill: $red;
+    }
+  }
+
+  a:nth-child(2) {
+    svg {
+      &:hover {
+        fill: $yellow;
+      }
+    }
+  }
+  a:nth-child(3) {
+    svg {
+      &:hover {
+        fill: $blue;
+      }
+    }
+  }
+}

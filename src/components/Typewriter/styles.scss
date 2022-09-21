@@ -1,0 +1,23 @@
+.cursor__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: $xs-size;
+  height: 2.8rem;
+}
+
+.cursor {
+  width: $s-size;
+  background-color: #fff;
+  height: 100%;
+}
+
+.cursor.blinking {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,76 @@
+.project-cards__wrap {
+  background-color: $secondary-bg;
+  padding: $l-size 0 $xl-size;
+  z-index: $z-3;
+}
+.project-cards {
+  max-width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: $l-size;
+}
+.project-cards__card {
+  background-color: #fff;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  z-index: $z-3;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%) blur(2px);
+    }
+    &:after,
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:after,
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s;
+    opacity: 0;
+    transition-timing-function: $pop-in-transition;
+    z-index: $z-1;
+  }
+  &:after {
+    content: attr(title);
+    color: $text-color;
+    font-family: $mono-font;
+    font-size: 2.4rem;
+    text-shadow: 0 3px 0 $primary-bg;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &:before {
+    content: " ";
+    background-color: $red;
+    mix-blend-mode: multiply;
+  }
+  &:nth-child(3n-1) {
+    &:before {
+      background-color: $yellow;
+    }
+  }
+  &:nth-child(3n) {
+    &:before {
+      background-color: $blue;
+    }
+  }
+}

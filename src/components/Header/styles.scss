@@ -1,0 +1,53 @@
+.header {
+  z-index: $z-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $header-height;
+  padding: 0 $m-size;
+  background-image: radial-gradient(rgba(0, 0, 0, 0) 1px, $primary-bg 1px);
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  color: $text-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  h2 {
+    font-family: $display-font;
+    font-feature-settings: "ss01";
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $text-color;
+    opacity: 0.2;
+  }
+}
+
+.header__nav {
+  ul {
+    display: flex;
+    column-gap: $m-size;
+    li {
+      list-style: none;
+      font-family: $mono-font;
+      font-size: 2rem;
+      text-transform: uppercase;
+      &:hover {
+        @extend .crt;
+      }
+    }
+  }
+}

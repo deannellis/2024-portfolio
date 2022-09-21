@@ -1,0 +1,17 @@
+@import "./fonts.scss";
+@import "./variables";
+@import "./global.scss";
+@import "./utils.scss";
+
+// COMPONENTS
+@import "../components/Header/styles.scss";
+@import "../components/Footer/styles.scss";
+@import "../components/ProjectPage/styles.scss";
+@import "../components/Typewriter/styles.scss";
+
+// SECTIONS
+@import "../sections/LandingHero/styles.scss";
+@import "../sections/ProjectCards/styles.scss";
+
+// SHARED
+@import "./shared/button.scss";
