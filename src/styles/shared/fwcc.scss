@@ -1,0 +1,10 @@
+// Fixed Width Centered Column
+
+.fwcc__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fwcc {
+    max-width: 70vw;
+}

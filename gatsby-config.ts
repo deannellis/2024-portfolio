@@ -40,6 +40,13 @@ const config: GatsbyConfig = {
         display: "swap",
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/content/`,
+        name: "content",
+      },
+    },
   ],
 };
 

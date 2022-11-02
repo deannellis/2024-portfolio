@@ -4,8 +4,6 @@
   z-index: $z-3;
 }
 .project-cards {
-  max-width: 70vw;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: $l-size;
@@ -63,14 +61,21 @@
     background-color: $red;
     mix-blend-mode: multiply;
   }
+}
+
+.project-cards__link {
   &:nth-child(3n-1) {
-    &:before {
-      background-color: $yellow;
+    .project-cards__card {
+      &:before {
+        background-color: $yellow;
+      }
     }
   }
   &:nth-child(3n) {
-    &:before {
-      background-color: $blue;
+    .project-cards__card {
+      &:before {
+        background-color: $blue;
+      }
     }
   }
 }

@@ -1,0 +1,63 @@
+.post__wrapper {
+    padding-top: $header-height;
+    background-color: $primary-bg;
+    color: $text-color;
+}
+
+.post__title {
+    font-size: 6.4rem;
+    font-family: $display-font;
+    margin: 6.4rem 0 0;
+}
+.post__subtitle {
+    font-size: 1.8rem;
+    font-family: $mono-font;
+    margin: $l-size 0 $xl-size;
+}
+
+.post__date {
+    text-transform: uppercase;
+    opacity: 0.84;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.post__body {
+    margin: 9.6rem 7.2rem $xl-size;
+    padding: $l-size 0;
+    border-top: 1px solid $text-color;
+    p {
+        font-size: 1.8rem;
+        font-weight: 200;
+        line-height: $leading-relaxed;
+    }
+    blockquote {
+        border-left: 4px solid $text-color;
+        margin-left: 0;
+        padding-left: $l-size;
+    }
+    a {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+.post__paging {
+    color: $text-color;
+    width: 100%;
+    border-top: 1px solid $text-color;
+    display: flex;
+    justify-content: space-between;
+    padding: $l-size 0;
+    a {
+        color: $text-color;
+        span {
+            display: flex;
+            align-items: center;
+            column-gap: $s-size;
+        }
+        svg {
+            fill: $text-color;
+        }
+    }
+}

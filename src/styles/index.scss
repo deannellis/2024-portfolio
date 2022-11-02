@@ -3,6 +3,10 @@
 @import "./global.scss";
 @import "./utils.scss";
 
+// PAGES
+@import "./pages/blog.scss";
+@import "./pages/post.scss";
+
 // COMPONENTS
 @import "../components/Header/styles.scss";
 @import "../components/Footer/styles.scss";
@@ -15,3 +19,4 @@
 
 // SHARED
 @import "./shared/button.scss";
+@import "./shared/fwcc.scss";
