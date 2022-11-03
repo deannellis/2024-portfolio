@@ -1,74 +1,74 @@
 .landing-hero__wrap {
-  width: 100vw;
-  height: calc(100vh - $header-height);
-  padding: $header-height 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: $primary-bg;
-  @extend .crt-bg;
-  scroll-snap-align: center;
-  perspective: 500px;
+    width: 100vw;
+    height: calc(100vh - $header-height);
+    padding: $header-height 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--primary-bg);
+    @extend .crt-bg;
+    scroll-snap-align: center;
+    perspective: 500px;
 }
 
 .landing-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // position: relative;
-  row-gap: 3.2rem;
-  color: $text-color;
-  h1 {
-    font-size: 9.6rem;
-    font-family: $display-font, sans-serif;
-    font-feature-settings: "ss01";
-    font-weight: 700;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    // @extend .crt;
-    margin: 0 0 1.6rem;
-  }
-  hr {
-    width: 50%;
-  }
-  h2 {
-    margin: 0;
-    font-family: $mono-font, monospace;
-    @extend .crt;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // position: relative;
+    row-gap: 3.2rem;
+    color: var(--text-color);
+    h1 {
+        font-size: 9.6rem;
+        font-family: $display-font, sans-serif;
+        font-feature-settings: "ss01";
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        // @extend .crt;
+        margin: 0 0 1.6rem;
+    }
+    hr {
+        width: 50%;
+    }
+    h2 {
+        margin: 0;
+        font-family: $mono-font, monospace;
+        @extend .crt;
+    }
 }
 
 .landing-hero__br-wrap {
-  width: 100%;
-  height: 4px;
-  position: relative;
+    width: 100%;
+    height: 4px;
+    position: relative;
 
-  .landing-hero__break:nth-child(2) {
-    background-color: $red;
-    z-index: 3;
-    opacity: 0.85;
-  }
+    .landing-hero__break:nth-child(2) {
+        background-color: $red;
+        z-index: 3;
+        opacity: 0.85;
+    }
 
-  .landing-hero__break:nth-child(3) {
-    background-color: $yellow;
-    z-index: 2;
-    opacity: 0.85;
-  }
+    .landing-hero__break:nth-child(3) {
+        background-color: $yellow;
+        z-index: 2;
+        opacity: 0.85;
+    }
 
-  .landing-hero__break:nth-child(4) {
-    background-color: $blue;
-    z-index: 1;
-    opacity: 0.85;
-  }
+    .landing-hero__break:nth-child(4) {
+        background-color: $blue;
+        z-index: 1;
+        opacity: 0.85;
+    }
 }
 
 .landing-hero__break {
-  background-color: #fff;
-  height: 3px;
-  position: absolute;
-  top: 0;
-  z-index: 4;
-  @extend .crt;
+    background-color: var(--text-color);
+    height: 3px;
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    @extend .crt;
 }

@@ -11,7 +11,14 @@ $yellow: #fcfe75;
 // COLOR APPLICATION
 $primary-bg: $dark-black;
 $secondary-bg: $black;
+$secondary-bg--o12: #2426291f;
 $text-color: $white;
+// CSS Variables
+:root {
+    --text-color: #{$white};
+    --primary-bg: #{$dark-black};
+    --secondary-bg: #{black};
+}
 
 // SIZES
 $xs-size: 1rem;

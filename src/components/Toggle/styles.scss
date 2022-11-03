@@ -1,0 +1,68 @@
+.toggle {
+    position: relative;
+    max-width: 6rem;
+}
+.toggle__icon {
+    z-index: $z-3;
+    position: absolute;
+    pointer-events: none;
+    top: 0.8rem;
+    svg {
+        fill: var(--text-color);
+    }
+}
+.toggle__icon--on {
+    @extend .toggle__icon;
+    left: 0.6rem;
+}
+.toggle__icon--off {
+    @extend .toggle__icon;
+    right: 0.6rem;
+}
+.toggle__label {
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3.4rem;
+}
+.toggle__label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    font-size: $m-size;
+}
+
+.toggle__switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary-bg);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+    box-shadow: $depth-1--inset;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #fff;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+        box-shadow: $depth-2;
+        z-index: $z-1;
+    }
+}
+
+input:checked + .toggle__switch {
+    background-color: $secondary-bg--o12;
+}
+input:checked + .toggle__switch::before {
+    transform: translateX(26px);
+}

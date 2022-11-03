@@ -1,37 +1,37 @@
 .button {
-  background-color: $blue;
-  padding: $s-size $m-size;
-  display: flex;
-  align-items: center;
-  transition: $default-transition;
-  cursor: pointer;
-  border: none;
-  color: $primary-bg;
-  font-family: $mono-font;
-  svg {
-    fill: $primary-bg;
-  }
-  &:hover {
-    @extend .crt;
-  }
+    background-color: $blue;
+    padding: $s-size $m-size;
+    display: flex;
+    align-items: center;
+    transition: $default-transition;
+    cursor: pointer;
+    border: none;
+    color: var(--primary-bg);
+    font-family: $mono-font;
+    svg {
+        fill: var(--primary-bg);
+    }
+    &:hover {
+        @extend .crt;
+    }
 }
 
 .button--outline {
-  @extend .button;
-  background: none;
-  border: 1px solid $text-color;
-  color: $text-color;
-  svg {
-    margin-left: $s-size;
-    fill: $text-color;
-  }
-  &:hover {
-    border-color: $blue;
-    color: $blue;
-    animation: none;
-    box-shadow: 3px 3px 0 $blue;
+    @extend .button;
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
     svg {
-      fill: $blue;
+        margin-left: $s-size;
+        fill: var(--text-color);
     }
-  }
+    &:hover {
+        border-color: $blue;
+        color: $blue;
+        animation: none;
+        box-shadow: 3px 3px 0 $blue;
+        svg {
+            fill: $blue;
+        }
+    }
 }

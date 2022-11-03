@@ -1,7 +1,7 @@
 .post__wrapper {
     padding-top: $header-height;
-    background-color: $primary-bg;
-    color: $text-color;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
 }
 
 .post__title {
@@ -25,39 +25,39 @@
 .post__body {
     margin: 9.6rem 7.2rem $xl-size;
     padding: $l-size 0;
-    border-top: 1px solid $text-color;
+    border-top: 1px solid var(--text-color);
     p {
         font-size: 1.8rem;
         font-weight: 200;
         line-height: $leading-relaxed;
     }
     blockquote {
-        border-left: 4px solid $text-color;
+        border-left: 4px solid var(--text-color);
         margin-left: 0;
         padding-left: $l-size;
     }
     a {
-        color: $text-color;
+        color: var(--text-color);
         text-decoration: underline;
     }
 }
 
 .post__paging {
-    color: $text-color;
+    color: var(--text-color);
     width: 100%;
-    border-top: 1px solid $text-color;
+    border-top: 1px solid var(--text-color);
     display: flex;
     justify-content: space-between;
     padding: $l-size 0;
     a {
-        color: $text-color;
+        color: var(--text-color);
         span {
             display: flex;
             align-items: center;
             column-gap: $s-size;
         }
         svg {
-            fill: $text-color;
+            fill: var(--text-color);
         }
     }
 }
