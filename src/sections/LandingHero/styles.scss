@@ -1,4 +1,5 @@
 .landing-hero__wrap {
+    z-index: $z-bottom;
     width: 100vw;
     height: calc(100vh - $header-height);
     padding: $header-height 0 0;
