@@ -30,6 +30,8 @@
         letter-spacing: 1px;
         // @extend .crt;
         margin: 0 0 1.6rem;
+        text-align: center;
+        line-height: $leading-none;
     }
     hr {
         width: 50%;

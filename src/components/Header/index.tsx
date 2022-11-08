@@ -73,6 +73,14 @@ const Header = () => {
                 </div>
                 <nav className="header__mobile-nav">
                     <NavList />
+                    <Toggle
+                        checked={!themeIsLight}
+                        onIcon="Sun Icon"
+                        offIcon="Moon Icon"
+                        onToggleChange={() => {
+                            toggleColorMode();
+                        }}
+                    />
                 </nav>
             </motion.div>
         </header>

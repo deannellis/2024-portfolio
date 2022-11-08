@@ -125,9 +125,10 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    padding-bottom: calc(#{$header-height} + #{$xl-size});
     ul {
+        margin-bottom: $l-size;
         padding-inline-start: 0;
-        margin-bottom: calc(#{$header-height} + #{$l-size});
         flex-direction: column;
         text-align: center;
         row-gap: $l-size;

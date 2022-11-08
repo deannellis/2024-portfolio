@@ -2,6 +2,8 @@ import React from "react";
 import PageLayout from "../components/PageLayout";
 
 import portrait from "../assets/images/pixelPortrait.png";
+import Icon from "../components/Icon";
+import resumePdf from "../assets/pdfs/DeanNellis_Resume.pdf";
 
 const AboutPage = () => {
     return (
@@ -40,6 +42,16 @@ const AboutPage = () => {
                             with others, and creating solutions to complex
                             problems.
                         </p>
+                        <div style={{ display: "flex" }}>
+                            <a
+                                href={resumePdf}
+                                target="blank"
+                                className="button"
+                            >
+                                <Icon title="PDF Icon" size={20} />
+                                View Résumé
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

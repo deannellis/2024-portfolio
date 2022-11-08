@@ -5,8 +5,11 @@
 }
 .project-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: $l-size;
+    @include for-tablet-landscape-up {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 .project-cards__card {
     background-color: #fff;

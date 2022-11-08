@@ -5,17 +5,23 @@
 
 .about {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
+    @include for-tablet-landscape-up {
+        grid-template-columns: 1fr 2fr;
+    }
 }
 
 .about__portrait {
     background-color: #000;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     img {
         image-rendering: pixelated;
         aspect-ratio: 1/1;
         width: 100%;
+    }
+    @include for-desktop-up {
+        align-items: flex-end;
     }
 }
 

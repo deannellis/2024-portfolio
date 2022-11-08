@@ -10,6 +10,7 @@
     font-family: $mono-font;
     svg {
         fill: var(--primary-bg);
+        margin-right: $s-size;
     }
     &:hover {
         @extend .crt;
@@ -22,7 +23,7 @@
     border: 1px solid var(--text-color);
     color: var(--text-color);
     svg {
-        margin-left: $s-size;
+        margin: 0 0 0 $s-size;
         fill: var(--text-color);
     }
     &:hover {

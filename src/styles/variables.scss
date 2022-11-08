@@ -17,7 +17,7 @@ $text-color: $white;
 :root {
     --text-color: #{$white};
     --primary-bg: #{$dark-black};
-    --secondary-bg: #{black};
+    --secondary-bg: #{$black};
 }
 
 // SIZES
