@@ -89,7 +89,9 @@ const Header = () => {
 
 const NavList = () => (
     <ul>
-        <li>Work</li>
+        <li>
+            <Link to="/#work">Work</Link>
+        </li>
         <li>
             <Link to="/blog">Blog</Link>
         </li>

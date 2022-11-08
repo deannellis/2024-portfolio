@@ -45,7 +45,7 @@ const LandingHero: FC<LandingHeroProps> = (props) => {
     const getShadowArray = (length: number) =>
         Array.from(Array(length)).map((n, i) => getShadowString(i));
 
-    const numShadowVariants = 7;
+    const numShadowVariants = 12;
 
     const headerShadow = useTransform(
         scrollYProgress,
@@ -74,42 +74,44 @@ const LandingHero: FC<LandingHeroProps> = (props) => {
 
     return (
         <section className="landing-hero__wrap">
-            <motion.div className="landing-hero" style={{ y: heroY }}>
-                <motion.h1
-                    style={{
-                        textShadow: headerShadow,
-                    }}
-                >
-                    Dean Nellis
-                </motion.h1>
-                <div className="landing-hero__br-wrap">
-                    <motion.div
-                        className="landing-hero__break"
-                        animate="in"
-                        variants={variants}
-                        custom={3}
-                    />
-                    <motion.div
-                        className="landing-hero__break"
-                        animate="in"
-                        variants={variants}
-                        custom={2}
-                    />
-                    <motion.div
-                        className="landing-hero__break"
-                        animate="in"
-                        variants={variants}
-                        custom={1}
-                    />
-                    <motion.div
-                        className="landing-hero__break"
-                        animate="in"
-                        variants={variants}
-                        custom={0}
-                    />
-                </div>
-                <Typewriter messages={messages} />
-            </motion.div>
+            <div className="landing-hero__inner">
+                <motion.div className="landing-hero">
+                    <motion.h1
+                        style={{
+                            textShadow: headerShadow,
+                        }}
+                    >
+                        Dean Nellis
+                    </motion.h1>
+                    <div className="landing-hero__br-wrap">
+                        <motion.div
+                            className="landing-hero__break"
+                            animate="in"
+                            variants={variants}
+                            custom={3}
+                        />
+                        <motion.div
+                            className="landing-hero__break"
+                            animate="in"
+                            variants={variants}
+                            custom={2}
+                        />
+                        <motion.div
+                            className="landing-hero__break"
+                            animate="in"
+                            variants={variants}
+                            custom={1}
+                        />
+                        <motion.div
+                            className="landing-hero__break"
+                            animate="in"
+                            variants={variants}
+                            custom={0}
+                        />
+                    </div>
+                    <Typewriter messages={messages} />
+                </motion.div>
+            </div>
         </section>
     );
 };

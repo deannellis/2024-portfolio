@@ -6,18 +6,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     background-color: var(--primary-bg);
     @extend .crt-bg;
     scroll-snap-align: center;
-    perspective: 500px;
+    // perspective: 500px;
+}
+
+.landing-hero__inner {
+    z-index: $z-3;
+    width: 100vw;
+    height: calc(100vh - ($header-height + $footer-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: $header-height;
 }
 
 .landing-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // position: relative;
+    // position: fixed;
+    // top: $header-height;
     row-gap: 3.2rem;
     color: var(--text-color);
     h1 {
