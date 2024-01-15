@@ -101,6 +101,11 @@
         border: 8px solid #000000bd;
     }
 }
+.project__video-player {
+    display: flex;
+    justify-content: center;
+    margin: $l-size 0 8rem;
+}
 
 .project__footer {
     display: flex;

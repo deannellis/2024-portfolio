@@ -8,9 +8,10 @@ interface LandingHeroProps {}
 
 const messages = [
     "I am a Full Stack Developer",
-    "I am a CSS Wizard",
     "I am a Father",
     "I am a Pop Tart Enthusiast",
+    "I am a CSS Wizard",
+    "I am a Aesthete",
 ];
 
 const LandingHero: FC<LandingHeroProps> = (props) => {

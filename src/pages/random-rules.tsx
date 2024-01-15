@@ -8,13 +8,14 @@ import {
     NoliImage02,
     NoliImage03,
 } from "../assets/image-sharp/NoliImages.js";
+import gradientGif from "../assets/gifs/random_rules_gradient.gif";
 
 const buttons = [
-    {
-        href: "https://randomrules.xyz/",
-        icon: "leaveSite",
-        label: "Visit the Website",
-    },
+    // {
+    //     href: "https://randomrules.xyz/",
+    //     icon: "leaveSite",
+    //     label: "Visit the Website",
+    // },
 ];
 const technologies = [
     {
@@ -47,63 +48,97 @@ const RandomRules: FC<PageProps> = (props) => {
                 locationPathname={props.location.pathname}
                 background={
                     <>
-                        <p>Random Rules is a curated newsletter</p>
+                        <p>
+                            Random Rules was a curated blog and newsletter for
+                            news in the world of Web3. This was an internal
+                            project within Dot Dash to share interesting news
+                            within the world of Web3 and to position Dot Dash as
+                            an expert in the emerging space. For me, this was an
+                            exciting project as I was able to lead the projects
+                            architecture and development. Along with myself, the
+                            team consisted of 3 other designers and developers.
+                        </p>
+                        <p>
+                            The site is powered by an{" "}
+                            <a href="https://expressjs.com/" target="_blank">
+                                Express
+                            </a>{" "}
+                            backend that server renders views using{" "}
+                            <a href="https://pugjs.org/" target="_blank">
+                                Pug
+                            </a>{" "}
+                            templates. For UI elements that need some extra
+                            client side functionality, we sprinkled in{" "}
+                            <a
+                                href="https://vuejs.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Vue
+                            </a>
+                            . Content is managed in{" "}
+                            <a
+                                href="
+                            https://www.datocms.com/
+                            "
+                                target="_blank"
+                            >
+                                DatoCMS
+                            </a>
+                            . User authentication uses JWTs and stores user data
+                            in a postgres database. We created our own MVC
+                            architecture using{" "}
+                            <a
+                                href="https://sequelize.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Sequelize
+                            </a>
+                            .
+                        </p>
                     </>
                 }
             >
-                <div className="project__comp">
-                    <aside>
-                        <h4>Clean, Minimalist Design</h4>
-                        <p>
-                            We let NOLI's beautiful product photography take
-                            center stage by implemeneting a minimal design,
-                            inspired by Scandinavian minimalism.
-                        </p>
-                    </aside>
-                    <NoliImage01 />
+                <div className="project__video-player">
+                    <iframe
+                        src="https://player.vimeo.com/video/902985199?color=ffffff"
+                        width="700"
+                        height="394"
+                        frameborder="0"
+                        webkitallowfullscreen
+                        mozallowfullscreen
+                        allowfullscreen
+                        title="Kinetic Typography: The Life Aquatic"
+                    ></iframe>
                 </div>
                 <div className="project__comp">
                     <aside>
-                        <h4>Best in Class Performance and SEO</h4>
+                        <h4>Dripping with Aesthetic</h4>
                         <p>
-                            Using a headless front-end with Gatsby, we were able
-                            to achieve excellent page speeds and performance.
+                            It was a pleasure bringing to life the designs of{" "}
+                            <a
+                                href="https://www.linkedin.com/in/chris-allen-22904729/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Chris Allen
+                            </a>{" "}
+                            on this one. With a brand identity that harkens back
+                            to the internet of the 90s along with modern
+                            brutalist elements, the design really shines.
                         </p>
                         <p>
-                            I worked closely with our SEO expert to get things
-                            dialed in and learned a lot along the way. We
-                            implemented many SEO best practices including:
+                            The most satisfying feature to implement was the
+                            animated background gradient using WebGL shaders.
                         </p>
-                        <ul>
-                            <li>dynamic open graph and meta tags</li>
-                            <li>structured data/schema markup</li>
-                            <li>semantic HTML tags and attributes</li>
-                            <li>dynamic sitemaps and robots.txt files</li>
-                        </ul>
                     </aside>
-                    <NoliImage02 />
-                </div>
-                <div className="project__comp">
-                    <aside>
-                        <h4>Featureful Contact Form</h4>
-                        <p>
-                            This simple contact form turned out to be a great
-                            exercise to implement a number of features:
-                        </p>
-                        <ul>
-                            <li>form validation with reCAPTCHA 2</li>
-                            <li>custom event tracking with Google Analytics</li>
-                            <li>
-                                Mailchimp subscription via their API, using
-                                JSONP to avoid CORS issues
-                            </li>
-                            <li>
-                                Submission to GravityForms within WordPress,
-                                using their API and OAuth
-                            </li>
-                        </ul>
-                    </aside>
-                    <NoliImage03 />
+                    <div className="project__mobile">
+                        <img
+                            src={gradientGif}
+                            alt="Random Rules landing page"
+                        />
+                    </div>
                 </div>
             </ProjectPage>
         </PageLayout>

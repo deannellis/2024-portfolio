@@ -73,7 +73,8 @@ const Noli: FC<PageProps> = (props) => {
                             >
                                 Christman Hersha
                             </a>{" "}
-                            , and myself handling front-end development
+                            , and myself handling front-end development and
+                            continuous deployment to Netlify.
                         </p>
                         <p>
                             For this project, we went with a headless WordPress
@@ -99,8 +100,24 @@ const Noli: FC<PageProps> = (props) => {
                     <aside>
                         <h4>Best in Class Performance and SEO</h4>
                         <p>
-                            Using a headless front-end with Gatsby, we were able
-                            to achieve excellent page speeds and performance.
+                            Using a headless front-end with{" "}
+                            <a
+                                href="https://www.gatsbyjs.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Gatsby
+                            </a>{" "}
+                            and web workers via{" "}
+                            <a
+                                href="https://partytown.builder.io/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Partytown
+                            </a>
+                            , we were able to achieve excellent page speeds and
+                            performance.
                         </p>
                         <p>
                             I worked closely with our SEO expert to get things
