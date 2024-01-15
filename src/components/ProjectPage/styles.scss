@@ -77,6 +77,12 @@
         font-size: 2.2rem;
     }
 
+    li {
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: $leading-normal;
+    }
+
     aside {
         margin: 0 $m-size 0 0;
         @include for-tablet-landscape-up {

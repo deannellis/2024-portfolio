@@ -53,11 +53,6 @@ const LandingHero: FC<LandingHeroProps> = (props) => {
         getShadowArray(numShadowVariants)
     );
 
-    const useParallax = (value: MotionValue<number>, distance: number) =>
-        useTransform(value, [0, 1], [0, distance]);
-
-    const heroY = useParallax(scrollYProgress, 850);
-
     const variants = {
         in: (custom: number) => ({
             width: ["0%", "60%", "50%"],

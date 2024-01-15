@@ -1,5 +1,6 @@
 .ascii {
     width: 100vw;
     height: 80vh;
-    // display: none;
+    z-index: $z-2;
+    position: relative;
 }
