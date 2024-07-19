@@ -2,7 +2,7 @@
 
 ---
 
-## [The portfolio site of designer/front-end developer, Dean Nellis](https://deannellis.me/)
+## [The portfolio site of full stack developer, Dean Nellis](https://deannellis.me/)
 
 ### Built with
 
