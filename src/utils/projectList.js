@@ -4,6 +4,7 @@ import kineticTypeCover from "../assets/images/kineticType_Cover.png";
 import diceRollerCover from "../assets/images/diceRoller_Cover.png";
 import cobLifeCover from "../assets/images/CobLife_Cover.jpg";
 import ispCover from "../assets/images/ISP_Cover.jpg";
+import divertCover from "../assets/images/Divert_Cover.png";
 import kamiCover from "../assets/images/Kami_Cover.png";
 import noliCover from "../assets/images/Noli_Cover.png";
 import randomRulesCover from "../assets/images/RandomRules_Cover.png";
@@ -20,34 +21,20 @@ export const projectList = [
         title: "Random Rules",
     },
     {
+        route: "/divert",
+        image: divertCover,
+        title: "Divert",
+    },
+    {
         route: "/kami",
         title: "Kami",
         image: kamiCover,
     },
-    {
-        route: "/gourmand",
-        title: "Gourmand",
-        image: gourmandCover,
-    },
-    {
-        route: "/dice-roller",
-        title: "Dice Roller",
-        image: diceRollerCover,
-    },
+
     {
         route: "/kinetic-type",
         title: "Kinetic Typography",
         image: kineticTypeCover,
-    },
-    {
-        route: "/cob-life",
-        title: "Cob Life",
-        image: cobLifeCover,
-    },
-    {
-        route: "/isp-prototype",
-        title: "In-Store Publisher Prototype",
-        image: ispCover,
     },
 ];
 

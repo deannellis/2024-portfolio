@@ -6,6 +6,7 @@
 .about {
     display: grid;
     grid-template-columns: 1fr;
+    min-height: calc(100vh - 7.2rem * 2);
     @include for-tablet-landscape-up {
         grid-template-columns: 1fr 2fr;
     }

@@ -23,8 +23,10 @@ const AboutPage = () => {
                             I have worn many hats over the years: UX Researcher,
                             Product Designer, and Frontend Developer. Currently
                             I work at{" "}
-                            <a href="https://dotdash.io/">Dot Dash </a> as a
-                            Full Stack Developer, creating attractive and
+                            <a target="_blank" href="https://dotdash.io/">
+                                Dot Dash{" "}
+                            </a>{" "}
+                            as a Full Stack Developer, creating attractive and
                             intuitive digital experiences for our clients.
                         </p>
                         <p>
@@ -32,7 +34,7 @@ const AboutPage = () => {
                             College of Design, Architecture, Art, and Planning
                             with a bachelor's degree in Graphic Communication
                             Design, with a focus in Interaction Design. Over the
-                            past 5 years, my passion has been cultivating my
+                            past 8 years, my passion has been cultivating my
                             skills in web development.
                         </p>
                         <p>
@@ -42,7 +44,7 @@ const AboutPage = () => {
                             with others, and creating solutions to complex
                             problems.
                         </p>
-                        <div style={{ display: "flex" }}>
+                        <div style={{ display: "flex", marginTop: "3.2rem" }}>
                             <a
                                 href={resumePdf}
                                 target="blank"

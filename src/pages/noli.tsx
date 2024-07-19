@@ -18,10 +18,6 @@ const buttons = [
 ];
 const technologies = [
     {
-        href: "https://www.gatsbyjs.com/",
-        label: "Gatsby",
-    },
-    {
         href: "https://wordpress.org/",
         label: "WordPress",
     },
@@ -90,7 +86,7 @@ const Noli: FC<PageProps> = (props) => {
                         <h4>Clean, Minimalist Design</h4>
                         <p>
                             We let NOLI's beautiful product photography take
-                            center stage by implemeneting a minimal design,
+                            center stage by implementing a minimal design,
                             inspired by Scandinavian minimalism.
                         </p>
                     </aside>
