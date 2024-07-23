@@ -2,7 +2,7 @@ import kineticTypeCover from "../assets/images/kineticType_Cover.png";
 import divertCover from "../assets/images/Divert_Cover.png";
 import kamiCover from "../assets/images/Kami_Cover.png";
 import noliCover from "../assets/images/NOLI_Cover.png";
-import randomRulesCover from "../assets/images/RandomRules_Cover.png";
+import randomRulesCover from "../assets/images/RandomRules_cover.png";
 
 export const projectList = [
     {
