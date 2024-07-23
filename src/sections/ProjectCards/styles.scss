@@ -4,6 +4,7 @@
     z-index: $z-2;
     position: relative;
 }
+
 .project-cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -14,7 +15,8 @@
 }
 .project-cards__card {
     background-color: #fff;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 1/1;
     overflow: hidden;
     position: relative;
     z-index: $z-3;

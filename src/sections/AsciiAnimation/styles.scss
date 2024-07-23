@@ -1,6 +1,10 @@
 .ascii {
     width: 100vw;
-    height: 80vh;
+    height: 60vh;
     z-index: $z-2;
     position: relative;
+
+    @include for-tablet-landscape-up {
+        height: 80vh;
+    }
 }
