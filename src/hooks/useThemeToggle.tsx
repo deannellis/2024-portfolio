@@ -16,10 +16,24 @@ const useThemeToggle = () => {
         },
     };
 
-    const storedColorMode =
-        localStorage.getItem("themeIsLight") !== null
-            ? localStorage.getItem("themeIsLight") === "true"
-            : false;
+    let storedColorMode = false;
+    const isLocalStorageAvailable = () => {
+        var test = "test";
+        try {
+            localStorage.setItem(test, test);
+            localStorage.removeItem(test);
+            return true;
+        } catch (e) {
+            return false;
+        }
+    };
+
+    if (isLocalStorageAvailable()) {
+        storedColorMode =
+            localStorage.getItem("themeIsLight") !== null
+                ? localStorage.getItem("themeIsLight") === "true"
+                : false;
+    }
 
     const [themeIsLight, setThemeIsLight] = useState(storedColorMode);
 
@@ -31,24 +45,29 @@ const useThemeToggle = () => {
 
     const toggleColorMode = () => {
         const newMode = themeIsLight ? "light" : "dark";
-        localStorage.setItem("themeIsLight", `${!themeIsLight}`);
+        if (isLocalStorageAvailable()) {
+            localStorage.setItem("themeIsLight", `${!themeIsLight}`);
+        }
         setThemeIsLight(!themeIsLight);
         updateThemeColors(newMode);
     };
 
     const updateThemeColors = (newMode: "light" | "dark") => {
-        document.documentElement.style.setProperty(
-            "--text-color",
-            `${colors.textColor[newMode]}`
-        );
-        document.documentElement.style.setProperty(
-            "--primary-bg",
-            `${colors.primaryBg[newMode]}`
-        );
-        document.documentElement.style.setProperty(
-            "--secondary-bg",
-            `${colors.secondaryBg[newMode]}`
-        );
+        const isBrowser = typeof window !== "undefined";
+        if (isBrowser) {
+            document.documentElement.style.setProperty(
+                "--text-color",
+                `${colors.textColor[newMode]}`
+            );
+            document.documentElement.style.setProperty(
+                "--primary-bg",
+                `${colors.primaryBg[newMode]}`
+            );
+            document.documentElement.style.setProperty(
+                "--secondary-bg",
+                `${colors.secondaryBg[newMode]}`
+            );
+        }
     };
 
     return [themeIsLight, toggleColorMode];
