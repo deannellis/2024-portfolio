@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { motion, Variants } from "framer-motion";
 
@@ -9,6 +9,11 @@ import Icon from "../Icon";
 const Header = () => {
     const [themeIsLight, toggleColorMode] = useThemeToggle();
     const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
 
     const getDrawerVariants = (i = 0) => ({
         open: {
@@ -47,42 +52,46 @@ const Header = () => {
             >
                 <Icon title="Menu Icon" size={24} />
             </button>
-            {Array(3)
-                .fill()
-                .map((_, i) => (
+            {loaded && (
+                <>
+                    {Array(3)
+                        .fill()
+                        .map((_, i) => (
+                            <motion.div
+                                variants={getDrawerVariants(i)}
+                                animate={drawerIsOpen ? "open" : "closed"}
+                                className={`header__drawer--${i + 1}`}
+                            />
+                        ))}
                     <motion.div
-                        variants={getDrawerVariants(i)}
+                        variants={getDrawerVariants(3)}
                         animate={drawerIsOpen ? "open" : "closed"}
-                        className={`header__drawer--${i + 1}`}
-                    />
-                ))}
-            <motion.div
-                variants={getDrawerVariants(3)}
-                animate={drawerIsOpen ? "open" : "closed"}
-                className="header__drawer"
-            >
-                <div className="header__close-wrapper">
-                    <button
-                        className="header__close"
-                        onClick={() => {
-                            setDrawerIsOpen(false);
-                        }}
+                        className="header__drawer"
                     >
-                        <Icon title="Close Icon" size={24} />
-                    </button>
-                </div>
-                <nav className="header__mobile-nav">
-                    <NavList />
-                    <Toggle
-                        checked={!themeIsLight}
-                        onIcon="Sun Icon"
-                        offIcon="Moon Icon"
-                        onToggleChange={() => {
-                            toggleColorMode();
-                        }}
-                    />
-                </nav>
-            </motion.div>
+                        <div className="header__close-wrapper">
+                            <button
+                                className="header__close"
+                                onClick={() => {
+                                    setDrawerIsOpen(false);
+                                }}
+                            >
+                                <Icon title="Close Icon" size={24} />
+                            </button>
+                        </div>
+                        <nav className="header__mobile-nav">
+                            <NavList />
+                            <Toggle
+                                checked={!themeIsLight}
+                                onIcon="Sun Icon"
+                                offIcon="Moon Icon"
+                                onToggleChange={() => {
+                                    toggleColorMode();
+                                }}
+                            />
+                        </nav>
+                    </motion.div>
+                </>
+            )}
         </header>
     );
 };
