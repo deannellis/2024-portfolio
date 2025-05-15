@@ -6,10 +6,10 @@
     transition: $default-transition;
     cursor: pointer;
     border: none;
-    color: var(--primary-bg);
+    color: $dark-black;
     font-family: $mono-font;
     svg {
-        fill: var(--primary-bg);
+        fill: $dark-black;
         margin-right: $s-size;
     }
     &:hover {
